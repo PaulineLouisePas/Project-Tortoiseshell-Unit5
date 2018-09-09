@@ -69,7 +69,70 @@ header {
   top: 11rem;
   left: 2rem;
 }
+/* NOTE: Content section layout */
 
+.contentbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.serviceline {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0rem;
+}
+
+.servicebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 5rem;
+  height: 8rem;
+  padding: 0rem 3rem;
+}
+
+.servicebox h3 {
+  text-align: center;
+}
+
+.servicebox1 img {
+  width: 3.5rem;
+}
+
+.servicebox2 img {
+  width: 5rem;
+}
+
+.servicebox3 img {
+  width: 5rem;
+}
+
+.infoline {
+  display: flex;
+justify-content: center;
+  align-items: flex-start;
+  width: 960px;
+}
+
+.infobox {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: auto;
+  margin: 0% 2.5%;
+}
+
+.infobox h1 {
+  background-color: cadetblue;
+  text-align: center;
+  padding: 0.5rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 /* NOTE: Footer section layout */
 
 footer {
