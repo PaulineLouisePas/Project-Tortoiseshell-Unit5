@@ -3,27 +3,52 @@ html {
   font-family: helvetica;
 }
 
-body {
-  width: 100%;
-}
-
 /* NOTE: Header layout */
 
 header {
   background-image: url(./images/glasses-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
   height: 31rem;
   display: flex;
   justify-content: center;
 }
 
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 22rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  header {
+    height: 17rem;
+    max-width: 470px;
+    background-position: 20% 0%;
+  }
+}
+
+/* NOTE: Positioning of topbar and sloganbox */
 .headerbox {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
+
+@media only screen and (max-width: 1024px) {
+  .headerbox {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .headerbox {
+    max-width: 470px;
+  }
+}
+
+/* NOTE: Topbar header */
 
 .topbar {
   display: flex;
@@ -35,6 +60,15 @@ header {
   height: 3rem;
   position: relative;
   top: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .topbar {
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    top: 0rem;
+  }
 }
 
 .company {
@@ -49,6 +83,14 @@ header {
   margin-right: 1rem;
 }
 
+@media only screen and (max-width: 470px) {
+  .company span {
+    display: none;
+  }
+}
+
+/* NOTE: Navigation bar */
+
 .nav {
   margin-right: 1rem;
 }
@@ -59,6 +101,26 @@ header {
   margin: 1rem;
 }
 
+/* NOTE: Navigation bar <470px */
+
+@media only screen and (min-width: 470px) {
+  .navdropdown {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .nav {
+    display: none;
+  }
+  .navdropdown a{
+    color: white;
+    text-decoration: none;
+    margin: 1rem;
+  }
+}
+
+/* NOTE: Sloganbox header section */
 .slogan {
   font-size: 2rem;
   font-weight: bold;
@@ -69,6 +131,29 @@ header {
   top: 11rem;
   left: 2rem;
 }
+
+@media only screen and (max-width: 1024px) {
+  .slogan {
+    font-size: 1.33rem;
+    padding: 0.75rem 4rem;
+    position: relative;
+    top: 5rem;
+    left: -2rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .slogan {
+    font-size: 1rem;
+    padding: 1rem 0rem;
+    position: relative;
+    top: 9rem;
+    left: 0rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* NOTE: Content section layout */
 
 .contentbox {
@@ -84,6 +169,13 @@ header {
   margin: 3rem 0rem;
 }
 
+@media only screen and (max-width: 470px) {
+  .serviceline {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .servicebox {
   display: flex;
   flex-direction: column;
@@ -92,6 +184,12 @@ header {
   width: 5rem;
   height: 8rem;
   padding: 0rem 3rem;
+}
+
+@media only screen and (max-width: 470px) {
+  .servicebox {
+    margin: 0.75rem;
+  }
 }
 
 .servicebox h3 {
@@ -117,12 +215,28 @@ justify-content: center;
   width: 960px;
 }
 
+@media only screen and (max-width: 470px) {
+  .infoline {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
 .infobox {
   display: flex;
   flex-direction: column;
   width: 35%;
   height: auto;
   margin: 0% 2.5%;
+}
+
+@media only screen and (max-width: 470px) {
+  .infobox {
+    width: 100%;
+    max-width: 470px;
+    margin: 0%;
+  }
 }
 
 .infobox h1 {
@@ -133,6 +247,7 @@ justify-content: center;
   font-weight: bold;
   margin-bottom: 1rem;
 }
+
 /* NOTE: Footer section layout */
 
 footer {
@@ -154,4 +269,14 @@ footer {
   width: auto;
   margin-left: 2rem;
   margin-right: 1rem;
+}
+
+@media only screen and (max-width: 470px) {
+  .copyright {
+    max-width: 470px;
+    justify-content: center;
+  }
+  .copyright span {
+    display: none;
+  }
 }
